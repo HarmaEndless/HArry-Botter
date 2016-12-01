@@ -1,0 +1,18 @@
+{
+  "name": "harrybotter",
+  "version": "1.0.0",
+  "description": "nuit de l'info",
+  "main": "harrybotter",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot nuit de l'info"
+  ],
+  "author": "AUBRUN-HAMMA",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.4.4",
+    "restify": "^4.3.0"
+  }
+}
