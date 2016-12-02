@@ -2,34 +2,19 @@ var restify = require('restify');
 var builder = require('botbuilder');
 
 
-// Create bot and add dialogs
+// Creation du bot botter
 var connector = new builder.ChatConnector({
-	appId: "YourAppId",
-	appPassword: "YourAppSecret"
+	appId: "Nuitde",
+	appPassword: "l'info"
 });
 var bot = new builder.UniversalBot(connector);
 bot.dialog('/', function (session) {
-	session.send('Hello World');
+	session.send('Expecto Patronum!!!');
 });
 
-// Setup Restify Server
+// Configuration du serveur
 var server = restify.createServer();
 server.post('/api/messages', connector.listen());
 server.listen(process.env.port || 3978, function () {
-	var restify = require('restify');
-	var builder = require('botbuilder');
-
-	var connector = new builder.ChatConnector({
-		appId: "Nuitde",
-		appPassword: "l'info"
-	});
-	var bot = new builder.UniversalBot(connector);
-	bot.dialog('/', function (session) {
-		session.send('Expecto Patronum!!!');
-	});
-
-	var server = restify.createServer();
-	server.post('/api/messages', connector.listen());
-	server.listen(process.env.port || 3978, function () {
-		console.log('%s listening to %s', server.name, server.url);
-	});
+	console.log('%s listening to %s', server.name, server.url);
+});
